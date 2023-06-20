@@ -15,7 +15,12 @@ use App\Http\Controllers\Weight_recordsController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/',[PostController::class,'front'])->name('front')->middleware('auth');
+Route::controller(PostController::class)->middleware(['auth'])->group(function(){
+    Route::get('/', 'front')->name('index');
+    Route::get('/weight', 'show_weight')->name('weight');
+    Route::get('/result_train', 'show_result_train')->name('result_train');
+});
+    
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -12,5 +12,14 @@ class PostController extends Controller
         return view('posts.front');
     }
     
+    public function show_weight()
+    {
+        return view('posts.weight');
+    }
+    
+    public function show_result_train()
+    {
+        return view('posts.result_train');
+    }
 }
 ?>
