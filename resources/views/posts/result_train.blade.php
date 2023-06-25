@@ -17,6 +17,10 @@
     <body class="front">
         <p>{{ Auth::user()->name }}</p>
        <h1>トレーニングをする</h1>
+       
+       <div class="footer">
+           <a href="/">戻る</a>
+       </div>
         
     </body>
     </x-app-layout>

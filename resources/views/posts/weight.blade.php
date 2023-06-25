@@ -17,6 +17,10 @@
     <body class="front">
         <p>{{ Auth::user()->name }}</p>
        <h1>今日の体重</h1>
+       
+       <div class="footer">
+           <a href="/">戻る</a>
+       </div>
         
     </body>
     </x-app-layout>
